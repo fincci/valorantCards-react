@@ -1,0 +1,43 @@
+.skill {
+    color: white;
+    font-size: var(--desc-size);
+    font-weight: var(--desc-weight);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    transition: .1s ease-in-out;
+}
+
+.skill img {
+    width: 50px;
+    height: 50px;
+}
+
+.skill:hover {
+    transform: scale(1.05);
+}
+
+.description {
+    display: flex;
+    flex-direction: column;
+    text-align: justify;
+}
+
+.description h4 {
+    font-size: var(--skillname-size);
+    font-weight: var(--skillname-weight);
+}
+
+.skill:nth-child(1) {
+    margin: 0 20px 0 50px;
+}
+.skill:nth-child(2) {
+    margin: 0 40px 0 30px;
+}
+.skill:nth-child(3) {
+    margin: 0 60px 0 10px;
+}
+.skill:nth-child(4) {
+    margin: 0 80px 0 -10px;
+}

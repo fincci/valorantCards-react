@@ -1,3 +1,5 @@
+import './abilities.css'
+
 const AbilitiesList = ({ props }) => {
     return (
         <ul className="list">
