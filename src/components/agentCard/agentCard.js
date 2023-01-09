@@ -11,11 +11,12 @@ const AgentCard = () => {
 
     const [data, setData] = useState([]);
     const [agent, setAgent] = useState(null);
+    const [animationClass, setAnimationClass] = useState("slide-trigger0")
 
     useEffect(() => {
         const fetchData = async () => {
             const response = await fetchDB(urlAgents);
-            setData(response.data);
+            setData(response.data.filter(data => data.isPlayableCharacter));
         }
         fetchData();
     }, []);
@@ -30,16 +31,15 @@ const AgentCard = () => {
     const handleClick = (agentName) => {
         const newAgent = data.find(agent => agent.displayName === agentName);
         setAgent(newAgent);
+        animationClass === 'slide-trigger0' ? setAnimationClass('slite-trigger1') : setAnimationClass('slide-trigger0')
     }
-
-    console.log(agent); //log
     if (!agent) {
         return
     } else {
         return (
             <section className="container">
                 <div className="card">
-                    <AgentArt props={agent.backgroundGradientColors} className="agent-art">
+                    <AgentArt props={agent.backgroundGradientColors} className={`agent-art ${animationClass}`}>
                         <BackgroundArt props={agent.background} className="background-art" />
                         <img id="agentPortrait" src={agent.bustPortrait} alt={`Personagem ${agent.displayName}`} />
                         <span className="name">{agent.displayName}</span>
@@ -53,7 +53,6 @@ const AgentCard = () => {
             </section>
         )
     }
-
 }
 
 const BackgroundArt = styled.div`
@@ -77,7 +76,7 @@ const AgentArt = styled.div`
     background-image: ${props =>
         `linear-gradient(180deg, #${props.props[0]}, #${props.props[1]}, #${props.props[2]}, #${props.props[3]})`
     };
-    animation: slide-right-img 1s;
+    animation: slide-right-img .5s;
 `;
 
 export { AgentCard }

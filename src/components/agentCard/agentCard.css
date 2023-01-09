@@ -35,13 +35,13 @@ body::before {
     100% {width: 50%; opacity: 1;}
 }
 
-/* .agent-art {
-    width: 50%;
-    height: var(--cardHeight);
-    position: relative;
-    background-color: var(--sageBg);
-    animation: slide-right-img 1s;
-} */
+.slide-trigger0{
+    animation: slide-right-img .5s;
+}
+
+.slide-trigger1 {
+    animation: slide-right-img .5s;
+}
 
 #agentPortrait {
     position: absolute;
@@ -50,7 +50,6 @@ body::before {
     transform: translate(-50%, -50%);
     height: 120%;
     width: 120%;
-    z-index: 2;
 }
 
 .name {
@@ -83,7 +82,7 @@ body::before {
     animation: slide-right-dividor 1s reverse;
     width: 0;
     height: 0;
-    border-bottom: var(--cardHeight) solid white;
+    border-bottom: var(--cardHeight) solid var(--cardBg);
     border-left: var(--effectWidth) solid transparent;
 }
 
