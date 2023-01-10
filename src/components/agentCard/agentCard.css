@@ -28,11 +28,21 @@ body::before {
     height: var(--cardHeight);
     background-color: var(--cardBg);
     position: relative;
+    box-shadow:  19px 19px 38px #424242,
+             -19px -19px 38px #4c4c4c;
+
 }
 
 @keyframes slide-right-img {
-    0% {width: 0; opacity: 0;}
-    100% {width: 50%; opacity: 1;}
+    0% {
+        width: 0;
+        opacity: 0;
+    }
+
+    100% {
+        width: 50%;
+        opacity: 1;
+    }
 }
 
 #agentPortrait {
@@ -62,8 +72,15 @@ body::before {
 }
 
 @keyframes slide-right-dividor {
-    0% {width: var(--effectWidth); opacity: 1;}
-    100% {width: 0; opacity: 1;}
+    0% {
+        width: var(--effectWidth);
+        opacity: 1;
+    }
+
+    100% {
+        width: 0;
+        opacity: 1;
+    }
 }
 
 .card-center {

@@ -36,7 +36,7 @@ const AgentCard = () => {
     } else {
         return (
             <section className="container">
-                <div className="card">
+                <div key={agent.displayName} className="card">
                     <AgentArt props={agent.backgroundGradientColors} className={`agent-art`}>
                         <BackgroundArt props={agent.background} className="background-art" />
                         <img id="agentPortrait" src={agent.bustPortrait} alt={`Personagem ${agent.displayName}`} />
