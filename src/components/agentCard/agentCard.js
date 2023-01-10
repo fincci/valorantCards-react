@@ -11,7 +11,6 @@ const AgentCard = () => {
 
     const [data, setData] = useState([]);
     const [agent, setAgent] = useState(null);
-    const [animationClass, setAnimationClass] = useState("slide-trigger0")
 
     useEffect(() => {
         const fetchData = async () => {
@@ -31,7 +30,6 @@ const AgentCard = () => {
     const handleClick = (agentName) => {
         const newAgent = data.find(agent => agent.displayName === agentName);
         setAgent(newAgent);
-        animationClass === 'slide-trigger0' ? setAnimationClass('slite-trigger1') : setAnimationClass('slide-trigger0')
     }
     if (!agent) {
         return
@@ -39,7 +37,7 @@ const AgentCard = () => {
         return (
             <section className="container">
                 <div className="card">
-                    <AgentArt props={agent.backgroundGradientColors} className={`agent-art ${animationClass}`}>
+                    <AgentArt props={agent.backgroundGradientColors} className={`agent-art`}>
                         <BackgroundArt props={agent.background} className="background-art" />
                         <img id="agentPortrait" src={agent.bustPortrait} alt={`Personagem ${agent.displayName}`} />
                         <span className="name">{agent.displayName}</span>

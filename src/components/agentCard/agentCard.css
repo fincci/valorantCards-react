@@ -35,14 +35,6 @@ body::before {
     100% {width: 50%; opacity: 1;}
 }
 
-.slide-trigger0{
-    animation: slide-right-img .5s;
-}
-
-.slide-trigger1 {
-    animation: slide-right-img .5s;
-}
-
 #agentPortrait {
     position: absolute;
     top: 50%;
@@ -71,7 +63,7 @@ body::before {
 
 @keyframes slide-right-dividor {
     0% {width: var(--effectWidth); opacity: 1;}
-    100% {width: 0; opacity: 0;}
+    100% {width: 0; opacity: 1;}
 }
 
 .card-center {
@@ -79,7 +71,7 @@ body::before {
     top: 50%;
     left: 50%;
     transform: translate(-100%, -50%);
-    animation: slide-right-dividor 1s reverse;
+    animation: slide-right-dividor .5s reverse;
     width: 0;
     height: 0;
     border-bottom: var(--cardHeight) solid var(--cardBg);
