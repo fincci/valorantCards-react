@@ -22,14 +22,27 @@ body::before {
     height: 100vh;
 }
 
+@keyframes teste {
+    0% {
+        transform: scaleX(.4);
+        transform-origin: 0 0
+    }
+
+    100% {
+        transform: scaleX(1);
+        transform-origin: 0 0
+    }
+}
+
 .card {
     display: flex;
     width: var(--cardWidth);
     height: var(--cardHeight);
     background-color: var(--cardBg);
     position: relative;
-    box-shadow:  19px 19px 38px #424242,
-             -19px -19px 38px #4c4c4c;
+    animation: teste .5s;
+    box-shadow: 19px 19px 38px #424242,
+        -19px -19px 38px #4c4c4c;
 
 }
 
@@ -71,24 +84,11 @@ body::before {
     width: 50%;
 }
 
-@keyframes slide-right-dividor {
-    0% {
-        width: var(--effectWidth);
-        opacity: 1;
-    }
-
-    100% {
-        width: 0;
-        opacity: 1;
-    }
-}
-
 .card-center {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-100%, -50%);
-    animation: slide-right-dividor .5s reverse;
     width: 0;
     height: 0;
     border-bottom: var(--cardHeight) solid var(--cardBg);
