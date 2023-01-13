@@ -41,9 +41,9 @@ body::before {
     background-color: var(--cardBg);
     position: relative;
     animation: teste .5s;
-    box-shadow: 19px 19px 38px #424242,
-        -19px -19px 38px #4c4c4c;
-
+    box-shadow: 19px 19px 38px #000000,
+        -19px -19px 38px #000000;
+    border-radius: 31px;
 }
 
 @keyframes slide-right-img {
@@ -56,6 +56,11 @@ body::before {
         width: 50%;
         opacity: 1;
     }
+}
+
+.agent-art {
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
 }
 
 #agentPortrait {
