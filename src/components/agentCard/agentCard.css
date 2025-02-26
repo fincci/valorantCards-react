@@ -6,7 +6,7 @@ body {
 
 body::before {
     content: '';
-    background: url('https://images.contentstack.io/v3/assets/bltb6530b271fddd0b1/blta2b1167957d775df/629003b1d31030576a34bbcb/map1920x1080.jpg?auto=webp&disable=upscale&height=549') center center no-repeat;
+    background: url('../../assets/images/background.png') center center no-repeat;
     background-size: cover;
     width: 100vw;
     height: 100vh;
@@ -41,8 +41,8 @@ body::before {
     background-color: var(--cardBg);
     position: relative;
     animation: teste .5s;
-    box-shadow: 19px 19px 38px #000000,
-        -19px -19px 38px #000000;
+    box-shadow: 19px 19px 38px #c7c7c7,
+        -19px -19px 38px #c7c7c7;
     border-radius: 31px;
 }
 
